@@ -1,7 +1,10 @@
 <ul class="todos">
-  <li class="todo" *ngFor="let todo of todos; let i = index">
+  <li
+    *ngFor="let todo of todos; let i = index"
+    class="todo {{ todo.completed ? 'done' : '' }}"
+  >
     <p class="id">{{ i }}</p>
-    <p class="content">{{ todo.content }}</p>
+    <div class="content" (click)="toggleDone(i)">{{ todo.content }}</div>
     <button class="delete">Remove</button>
   </li>
 </ul>
