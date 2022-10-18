@@ -5,6 +5,6 @@
   >
     <p class="id">{{ i }}</p>
     <div class="content" (click)="toggleDone(i)">{{ todo.content }}</div>
-    <button class="delete">Remove</button>
+    <button class="delete" (click)="deleteTodo(i)">Remove</button>
   </li>
 </ul>
