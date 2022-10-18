@@ -1,7 +1,7 @@
 <ul class="todos">
-  <li class="todo">
-    <p class="id">0</p>
-    <p class="content">My todo</p>
+  <li class="todo" *ngFor="let todo of todos; let i = index">
+    <p class="id">{{ i }}</p>
+    <p class="content">{{ todo.content }}</p>
     <button class="delete">Remove</button>
   </li>
 </ul>
